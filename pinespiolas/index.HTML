@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#121212">
+  <meta name="description" content="En Pin-Pon convertimos tus imágenes favoritas en pines personalizados. Elegí tu diseño y hacé tu pedido.">
+  <title>Pin-Pon | Tus ideas, hechas pin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">P</span>
+      <span>PIN<span class="violet">-</span>PON</span>
+    </a>
+
+    <a href="#catalogo" class="nav-link">Catálogo ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-tag">
+        <span class="live-dot"></span>
+        TUS IDEAS, HECHAS PIN
+      </div>
+
+      <h1>
+        Tus gustos.<br>
+        <span class="gradient-text">Tu propio pin.</span>
+      </h1>
+
+      <p class="hero-description">
+        Elegí una imagen que te encante y convertíla
+        en un pin único. Vos elegís el diseño,
+        nosotros lo hacemos realidad.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#personalizados" class="button button-primary">
+          Crear mi pin <span>↗</span>
+        </a>
+        <a href="#catalogo" class="button button-secondary">
+          Ver diseños
+        </a>
+      </div>
+
+      <div class="hero-note">
+        <span>✦</span> Diseños personalizados a tu gusto
+      </div>
+
+      <div class="hero-decoration decoration-one"></div>
+      <div class="hero-decoration decoration-two"></div>
+    </section>
+
+    <section class="section personalized" id="personalizados">
+      <div class="section-heading">
+        <span class="eyebrow">HECHO PARA VOS</span>
+        <h2>Tu imagen.<br>Tu <span class="violet">personalización.</span></h2>
+        <p>Un personaje, una foto, un meme o cualquier
+          imagen que quieras llevar con vos.</p>
+      </div>
+
+      <article class="product-card featured-card">
+        <div class="featured-label">
+          <span>✦</span> EL MÁS PERSONAL
+        </div>
+
+        <div class="pin-preview">
+          <div class="pin-circle">
+            <div class="pin-inner">
+              <span class="pin-sparkle">✦</span>
+              <span class="pin-question">?</span>
+              <span class="pin-caption">TU DISEÑO</span>
+            </div>
+          </div>
+          <div class="preview-caption">TU IDEA VA ACÁ</div>
+        </div>
+
+        <div class="product-info">
+          <div>
+            <h3>Pin personalizado</h3>
+            <p>Elegí la imagen que más te guste.</p>
+          </div>
+
+          <div class="price">$2.500</div>
+        </div>
+
+        <button class="button button-primary full-button"
+          onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})">
+          Quiero mi pin personalizado <span>↗</span>
+        </button>
+      </article>
+    </section>
+
+    <section class="section catalog-section" id="catalogo">
+      <div class="section-heading">
+        <span class="eyebrow">NUESTROS DISEÑOS</span>
+        <h2>Encontrá tu <span class="violet">favorito.</span></h2>
+        <p>También tenemos pines con diseños listos para vos.</p>
+      </div>
+
+          <div class="catalog-grid" id="productos">
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="imagenes/Perromeme.jpg" alt="Pin personalizado con diseño de perro">
+    </div>
+    <div class="product-info">
+      <strong class="product-price">$2.000</strong>
+      <button type="button" class="btn-producto" data-diseno="Perro Meme">
+        Elegir diseño
+      </button>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="imagenes/Mordecai.jpg" alt="Pin con diseño de Mordecai">
+    </div>
+    <div class="product-info">
+      <strong class="product-price">$2.000</strong>
+      <button type="button" class="btn-producto" data-diseno="Mordecai">
+        Elegir diseño
+      </button>
+    </div>
+  </article>
+
+  <article class="product-card">
+    <div class="product-image">
+      <img src="imagenes/Gokussj.jpg" alt="Pin con diseño de Goku">
+    </div>
+    <div class="product-info">
+      <strong class="product-price">$2.000</strong>
+      <button type="button" class="btn-producto" data-diseno="Goku SSJ">
+        Elegir diseño
+      </button>
+    </div>
+  </article>
+
+</div>
+
+      <div class="catalog-price">
+        <span>Pines con diseños disponibles</span>
+        <strong>$2.000 <small>c/u</small></strong>
+      </div>
+    </section>
+
+    <section class="section order-section" id="formulario">
+      <div class="section-heading">
+        <span class="eyebrow">HAGAMOS TU IDEA REALIDAD</span>
+        <h2>Pedí tu pin <span class="violet">acá.</span></h2>
+        <p>Completá los datos y prepará tu pedido para enviarlo por WhatsApp.</p>
+      </div>
+
+      <form id="pedido-form" class="order-form">
+        <label for="nombre">¿Cómo te llamás?</label>
+        <input id="nombre" name="nombre" type="text"
+          placeholder="Tu nombre" maxlength="60" required>
+
+        <label for="tipo">¿Qué pin querés?</label>
+        <select id="tipo" name="tipo" required>
+          <option value="Personalizado">Personalizado — $2.500</option>
+          <option value="Diseño disponible">Diseño disponible — $2.000</option>
+        </select>
+
+        <div id="imagen-campo">
+          <label for="imagen">Subí la imagen para tu pin</label>
+          <input id="imagen" name="imagen" type="file"
+            accept="image/*">
+          <p class="input-help">
+            Elegí una imagen de tu celular. Después podrás adjuntarla al mensaje de WhatsApp.
+          </p>
+          <div id="vista-previa" class="image-preview" hidden>
+            <img id="imagen-preview" alt="Vista previa de tu diseño">
+            <span id="nombre-imagen"></span>
+          </div>
+        </div>
+
+        <div id="diseno-campo" hidden>
+          <label for="diseno">¿Qué diseño te interesa?</label>
+          <input id="diseno" name="diseno" type="text"
+            placeholder="Nombre o descripción del diseño">
+        </div>
+
+        <label for="cantidad">¿Cuántos querés?</label>
+        <input id="cantidad" name="cantidad" type="number"
+          min="1" max="100" value="1" required>
+
+        <div class="order-total">
+          <span>Total estimado</span>
+          <strong id="total">$2.500</strong>
+        </div>
+
+        <button class="button button-primary full-button" type="submit">
+          Preparar pedido por WhatsApp ↗
+        </button>
+
+        <p class="form-note">
+          El pedido se confirma una vez que coordinemos los detalles.
+        </p>
+      </form>
+    </section>
+
+    <section class="final-banner">
+      <span class="eyebrow">PIN-PON</span>
+      <h2>Un pin puede decir<br><span class="gradient-text">mucho de vos.</span></h2>
+      <a href="#personalizados" class="button button-primary">
+        Creá el tuyo ↗
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#" class="logo">
+      <span class="logo-icon">P</span>
+      <span>PIN<span class="violet">-</span>PON</span>
+    </a>
+    <p>Tus gustos, hechos pin.</p>
+    <span class="copyright">© 2026 Pin-Pon</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
